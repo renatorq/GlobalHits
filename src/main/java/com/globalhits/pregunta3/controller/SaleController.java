@@ -1,9 +1,10 @@
 package com.globalhits.pregunta3.controller;
 
-import com.globalhits.pregunta3.entity.Product;
-import com.globalhits.pregunta3.repository.SaleRepository;
+import com.globalhits.pregunta3.service.SaleServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/Sales/v1")
