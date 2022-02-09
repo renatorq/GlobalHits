@@ -14,13 +14,13 @@ public class ProductController {
 
     @Autowired
     private ProductServiceImp productServiceImp;
-
+    @CrossOrigin(origins = "*",methods = {RequestMethod.POST})
     @PostMapping
     public ResponseEntity<Product> createProduct(@RequestBody Product product){
         Product productCreate= productServiceImp.createProduct(product);
         return  ResponseEntity.ok(productCreate);
     }
-
+    @CrossOrigin(origins = "*",methods = {RequestMethod.GET})
     @GetMapping
     public ResponseEntity<List<Product>> listProduct(){
         List<Product> listProducts = productServiceImp.listProductList();
