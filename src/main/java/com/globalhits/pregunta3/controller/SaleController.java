@@ -15,7 +15,7 @@ public class SaleController {
 
     @Autowired
     private SaleServiceImp saleServiceImp;
-
+    @CrossOrigin(origins = "*",methods = {RequestMethod.GET})
     @GetMapping(value = "/computingSale")
     private ResponseEntity<Double> computingSale (@RequestParam Long idProduct,@RequestParam Long amount){
         return ResponseEntity.status(HttpStatus.OK).body(saleServiceImp.computingSale(idProduct, amount));
